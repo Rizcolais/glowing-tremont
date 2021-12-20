@@ -1,0 +1,110 @@
+.nav-bar {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 50px;
+  z-index: 6;
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $font-color;
+    @include fontfamily (
+    $size: 14px,
+    );
+    @include tablet {
+      @include fontfamily (
+        $size: 12px,
+      );
+    }
+  }
+
+  a:hover {
+    color: $font-color-hover;
+  }
+  
+  .logo {
+    margin-right: auto;
+    padding-left: 45px;
+    @include tablet {
+      padding-left : 30px;
+    }
+    @include smartphone {
+      padding-left: 25px;
+    }
+    @include mini {
+      padding-left: 15px;
+    }
+    @include iphone {
+      padding-left: 0px;
+    }
+    a {
+      text-transform: uppercase;
+      @include fontfamily (
+      $size: 19px,
+      $spacing: 5.7px
+      );
+      @include tablet {
+        @include fontfamily (
+          $size: 16px,
+        );
+      }
+      @include smartphone {
+        @include fontfamily (
+          $size: 14px,
+        );
+      }
+    }  
+  }
+
+  .right-bar {
+    margin-right: 45px;
+    @include smartphone {
+      margin-right: 50px;
+    }
+    @include mini {
+      margin-right: 10px;
+    }
+    @include iphone {
+      margin-right: 0px;
+    }
+    a {
+      padding: 0 12px;
+      @include tablet {
+        padding: 0 4px;
+      }
+      @include smartphone {
+        padding: 0 2px;
+      }
+    }
+    
+  }
+
+  .social {
+    padding-right: 45px;
+    @include tablet {
+      padding-right: 25px;
+    }
+    @include smartphone {
+      padding-right: 5px;
+    }
+    @include iphone {
+      padding-right: 0px;
+    }
+    a {
+      padding: 0 5px;
+      transition: color 170ms ease-in-out;
+    }
+    a:hover {
+      color: $font-color
+    }
+  }
+  
+  .social:hover a:not(:hover) {
+    color: $font-color-not-hover
+  }
+  
+}

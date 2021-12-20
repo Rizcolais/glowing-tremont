@@ -1,0 +1,36 @@
+a { 
+    text-decoration: none;
+    color: $font-color;
+}
+
+.titles a {
+    text-transform: uppercase;
+    @include fontfamily (
+        $size: 5.625vh,
+        $height: 1.3em,
+        $spacing: .05em,
+    );
+    @include tablet {
+        @include fontfamily (
+            $size: 40px,
+        )
+    }
+    @include mini {
+        @include fontfamily (
+            $size: 30px,
+        )
+    }
+}
+
+.address {
+    text-align: center;
+    @include fontfamily (
+        $size: 18px,
+    );
+    @include mini {
+        @include fontfamily (
+            $size: 14px,
+        )
+    }
+    
+}
